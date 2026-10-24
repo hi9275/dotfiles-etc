@@ -21,4 +21,3 @@ EqualizerAPO settings are kind of old
 
 ## Don't Bother
 - VSCode settings (already synced in settings.json through account)
-- 

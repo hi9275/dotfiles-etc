@@ -5,7 +5,6 @@ Contains my dotfiles and other files I don't like sending back and forth across 
 EqualizerAPO settings are kind of old 
 
 ## TODO
-- nvidiaprofileinspector files from desktop
 - Create a developed config for Xonotic and push it here (push or whatever the word is idk I'm new to Git)
 - fastfetch
 - alacritty (mostly on Linux though)

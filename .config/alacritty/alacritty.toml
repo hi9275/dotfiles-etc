@@ -1,0 +1,75 @@
+
+[general]
+live_config_reload = true # Default
+
+[window]
+padding = { x = 0, y = 0} # Default
+dynamic_padding = false # Default
+decorations = "full" # Default
+opacity = 1.0 # Default
+blur = false # Default, only on macOS/KDE Wayland for true anyways
+startup_mode = "Windowed" # Default
+dynamic_title = true # Default
+decorations_theme_variant = "Dark" # def: "None"
+level = "Normal" # Default
+
+# General Window Settings
+[window.dimensions]
+columns = 150
+lines = 40
+
+# Font Configuration
+[font]
+normal = { family = "Iosevka Term", style = "Regular" }
+bold = { family = "Iosevka Term", style = "Bold" }
+italic = { family = "Iosevka Term", style = "Italic" }
+bold_italic = { family = "Iosevka Term", style = "Bold Italic" }
+size = 10.0
+offset.x = 0  # For letter spacing (default: 0)
+offset.y = 0 # For line spacing (default: 0)
+
+# Cursor Styling
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+vi_mode_style = { shape = "Block" }
+blink_interval = 750 # Default
+unfocused_hollow = true # Default
+thickness = 0.15 # Default
+
+# Scrolling
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Basic Color Scheme (Tokyo Night inspired)
+
+# Colors (Gruvbox dark)
+
+# Default colors
+[colors.primary]
+# hard contrast background = = '#1d2021'
+background = '#282828'
+# soft contrast background = = '#32302f'
+foreground = '#ebdbb2'
+
+# Normal colors
+[colors.normal]
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'

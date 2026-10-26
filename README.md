@@ -6,9 +6,7 @@ EqualizerAPO settings are kind of old
 
 ## TODO
 - Create a developed config for Xonotic and push it here (push or whatever the word is idk I'm new to Git)
-- fastfetch
-- alacritty (mostly on Linux though)
-- cava (both Windows and Linux files but merging is okay at this point and can just comment out or something)
+- merge cava file with Windows one to have some sort of universal file. Linux one is already in repo
 
 ## Maybe implement
 - gameinfo.gi from [Optimizationlock](https://github.com/Sqooky/OptimizationLock/blob/main/Sqooky's%20.gi/gameinfo.gi)

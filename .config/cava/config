@@ -5,19 +5,36 @@ live-config = 1
 framerate = 165
 autosens = 0
 sensitivity = 100
-scaling = linear # Default, but could try decibel
+max_height = 100
+
+# Default, but could try decibel
+scaling = linear
+
 #0 bars fills the screen
 bars = 0
-#0 or 1 is best, 0 means they touch
-bar_width = 1
-bar_spacing = 1
+
+# 8 for SDL, otherwise 1
+bar_width = 8
+
+# 2 for SDL, otherwise 1
+bar_spacing = 2
+
 lower_cutoff_freq = 20
 higher_cutoff_freq = 20000
 
 [input]
-method = pipewire
-#without eq (before equalizer kicks in)
-source = easyeffects_sink.monitor
+
+# Max playback quality from Spotify
+sample_rate = 44100
+sample_bits = 24
+
+
+# Linux
+
+# Most important
+;method = pipewire
+# Without eq (before equalizer kicks in)
+;source = easyeffects_sink.monitor
 
 #with eq
 #source = alsa_output.usb-FIIO_FIIO_KA11-01.analog-stereo.monitor
@@ -26,22 +43,27 @@ source = easyeffects_sink.monitor
 #source = alsa_output.usb-FIIO_FIIO_KA11-01.analog-stereo
 
 [output]
-# 'noncurses' is best for performance and frequency labels
+# 'noncurses' is best for frequency labels
 method = sdl
-channels = mono # best
-# frequency on x-axis, otherwise set to "none"
+
+# DOCS: 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
+# DOCS: set 'reverse' to 1 to display frequencies the other way around.
+channels = mono
+mono_option = average
+
+# frequency on x-axis, otherwise set to "none" DOES NOT WORK WITH SDL
 xaxis = frequency
 
-# removes flickering in alacritty terminal emulator.
-# defaults to off since the behaviour in other terminal emulators is unknown
+# DOCS: removes flickering in alacritty terminal emulator.
+# DOCS: defaults to off since the behaviour in other terminal emulators is unknown
 ; synchronized_sync = 0
 
+sdl_width = 1600
+sdl_height = 480
 
-[sdl]
-# sdl_width = 1024
-# sdl_height = 512
-# sdl_x = -1
-# sdl_y= -1
+# Default window positioning
+sdl_x = -1
+sdl_y= -1
 # bars = 50
 
 [color]
@@ -50,9 +72,10 @@ background = "#282828"
 foreground = "#cc241d"
 
 [smoothing]
-#0-100. 0 is raw with lowest delay.
+# 0-100. 0 is practically no delay
 noise_reduction = 0
-#does weird stuff with smoothness idk
+
+# does weird stuff with smoothness idk
 monstercat = 0
 waves = 0
 integral = 0
